@@ -1,7 +1,6 @@
-# custom_context_provider
-Drupal 8 module to fix ctools missing vocabulary term context.
+# Custom Context Provider
 
-This Drupal 8 module provides a service to fix the missing vocabulary term context (see https://www.drupal.org/project/ctools/issues/2712679). It enables conditional visibility groups to work with vocabulary conditions using this sandbox project: https://github.com/md-systems/vocabulary_condition.
+This Drupal 8 module acts as a service wrapper to fix the missing vocabulary term context (see https://www.drupal.org/project/ctools/issues/2712679). It enables conditional visibility groups to work with vocabulary conditions using the Vocabulary Condition sandbox project: https://github.com/md-systems/vocabulary_condition.
 
 Related modules:
 - Block Visibility Groups (https://www.drupal.org/project/block_visibility_groups)
