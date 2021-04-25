@@ -4,7 +4,6 @@ namespace Drupal\custom_context_provider\ContextProvider;
 
 use Drupal\Core\Cache\CacheableMetadata;
 use Drupal\Core\Plugin\Context\Context;
-use Drupal\Core\Plugin\Context\ContextDefinition;
 use Drupal\Core\Plugin\Context\EntityContextDefinition;
 use Drupal\Core\Plugin\Context\ContextProviderInterface;
 use Drupal\Core\Routing\RouteMatchInterface;
@@ -42,7 +41,7 @@ class TaxonomyTermContext implements ContextProviderInterface
     public function getRuntimeContexts(array $unqualified_context_ids)
     {
         $result = [];
-        $context_definition = new ContextDefinition('entity:taxonomy_term', $this->t('Taxonomy term from URL'));
+        $context_definition = new EntityContextDefinition('entity:taxonomy_term', $this->t('Taxonomy term from URL'));
         $value = null;
         if (($route_object = $this->routeMatch->getRouteObject())
             && ($route_contexts = $route_object->getOption('parameters'))
